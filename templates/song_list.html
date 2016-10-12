@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+<h1>Top Five Rush Songs You've Haven't Listened To Yet!</h1>
+<ul class="nav nav-pills nav-stacked">
+  <li role="presentation" ><a href="home">Home</a></li>
+  <li role="presentation"class="active"><a href="fav">Some of My Favorite Rush Songs</a></li>
+  <li role="presentation"><a href="about">About Me</a></li>
+  {% for song in songs%}
+    <div class="page-header">
+    <h1>{{song}}<small> From {{song.song_album}}</small></h1>
+  </div>
+  <p>
+    {{song.song_review}}
+  </p>
+  <p>
+
+  </p>
+
+  {%endfor%}
+
+  </body>
+</html>
